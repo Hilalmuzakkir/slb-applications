@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLB Login Page</title>
+    <style>
+   
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            background-image: url('Back.png');
+            background-size: 200% 200%;
+            background-position: 50% 30%;
+            animation: backgroundMove 20s ease infinite;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .login-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .login-container img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-container button {
+            width: 90%;
+            padding: 10px;
+            background: #0906e2;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .login-container button:hover {
+            background: #6966ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="slbtrans.png" alt="Logo">
+        <h2>Welcome Back To SLB Data!</h2>
+        <h6>This website is only used for QA & QC</h6>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+
+        </form>
+    </div>
+</body>
+</html>

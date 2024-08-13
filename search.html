@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Uploads</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <header class="header">
+        </header>
+        <main>
+            <section class="search-section">
+                <input type="text" id="search" placeholder="Search documents...">
+                <button id="search-btn">Search</button>
+            </section>
+            <section class="table-section">
+                <table id="documentsTable">
+                    <thead>
+                        <tr>
+                            <th>Document Name</th>
+                            <th>Uploaded By</th>
+                            <th>Upload Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Document 1.pdf</td>
+                            <td>John Doe</td>
+                            <td>2024-08-01</td>
+                            <td>
+                                <button class="action-btn">View</button>
+                                <button class="action-btn">Download</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Document 2.docx</td>
+                            <td>Jane Smith</td>
+                            <td>2024-07-25</td>
+                            <td>
+                                <button class="action-btn">View</button>
+                                <button class="action-btn">Download</button>
+                            </td>
+                        </tr>
+                        <!-- More rows can be added here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script>
+        // Function to filter table rows based on search input
+        function filterTable() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const table = document.getElementById('documentsTable');
+            const rows = table.getElementsByTagName('tr');
+
+            for (let i = 1; i < rows.length; i++) {
+                let cells = rows[i].getElementsByTagName('td');
+                let found = false;
+
+                for (let j = 0; j < cells.length - 1; j++) { // Exclude the last column (Actions)
+                    if (cells[j].textContent.toLowerCase().includes(input)) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (found) {
+                    rows[i].style.display = 'table-row';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        }
+
+        // Add event listener to search input
+        const searchInput = document.getElementById('search');
+        searchInput.addEventListener('input', filterTable);
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Welcome SLB Database</title>
+    <style>
+        body {
+            background-color: #f3f3f3; /* Warna abu-abu muda */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .main-content {
+            text-align: center;
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            font-size: 2.5em;
+            color: #333;
+        }
+        .header span {
+            color: #3498DB;
+        }
+        p {
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.6;
+        }
+        .login-button {
+            display: inline-block;
+            padding: 14px 60px;
+            background-color: transparent;
+            color: #666;
+            border: 2px solid #3498DB;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .login-button:hover {
+            transform: translateY(-5px);
+            background-color: #3498DB;
+            color: #fff;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 2px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (min-width: 768px) {
+            .main-content {
+                width: 80%;
+            }
+            .header {
+                font-size: 3em;
+            }
+            p {
+                font-size: 1.5em;
+            }
+        }
+        @media (min-width: 1024px) {
+            .main-content {
+                width: 70%;
+            }
+            .header {
+                font-size: 4em;
+            }
+            p {
+                font-size: 1.6em;
+            }
+        }
+        @media (max-width: 767px) {
+            .main-content {
+                width: 95%;
+            }
+            .header {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <div class="header">Organize your data with <span>SLB Data</span></div>
+        <p>Dengan SLB Data, Anda dapat mengelola data Anda dengan lebih mudah dan efisien.</p>
+        <!-- Form Login -->
+        <form action="login.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+    </div>
+    <div class="image-container">
+        <img src="Homeback.png" alt="Kelola Data Anda">
+    </div>
+    <!-- Section About App -->
+    <div class="main-content">
+        <div class="header">About <span>Application</span></div>
+        <p>SLB Data App is an information management solution designed to simplify data management with easy-to-use features, including the ability to upload, add and search data. The data upload feature allows users to import information from various file formats such as CSV directly into the system, with an intuitive interface to map data fields and ensure seamless integration. The add data feature facilitates manual input of information through forms designed to enter various types of data, including text, numbers, and dates, as well as include notes or attachments. Meanwhile, the search data feature makes it easy to find specific information in the database, using keywords, filters, and search parameters to filter results and quickly obtain the desired data. With these three main features, SLB Data offers convenience and efficiency in managing and accessing information, making it a very useful tool for a variety of data management needs.</p>
+    </div>
+</body>
+</html>
